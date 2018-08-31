@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=Big5">
+		<title>媒控Mediacon-記者出任務</title>
+		
+		<!-- favicon.ico -->
+		<link rel="stylesheet" href="animate.css">
+		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="main_ani.css">
+		<script src="modernizr.js"></script>
+
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript" language="javascript">
+			google.load("jquery", "1.3");
+		</script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<script src="jquery.fittext.js"></script>
+	</head>
+	<body>
+			<script type="text/javascript"> <!-- 手機版轉址 -->
+				function checkserAgent(){
+				var userAgentInfo=navigator.userAgent;
+				var Agents=new Array("Android", "iPhone" ,"SymbianOS", "Windows Phone", "iPad", "iPod", "MQQBrowser");
+				var flag=true;
+				
+				for(var v=0;v<Agents.length;v++){
+					if(userAgentInfo.indexOf(Agents[v])>0){
+					document.write(Agents[v]);
+						flag=false;
+						break;
+					}
+				}
+
+				return flag;
+			}
+
+			if(!checkserAgent()){
+				document.location.href="http://people.cs.nctu.edu.tw/~cpcho/Mediacon_mobile/";
+			}
+		</script>
+	
+		<audio src="http://140.113.207.170/1.mp3" id="crash" preload="auto" ></audio>
+		<audio src="http://140.113.207.170/music.mp3" id="mp3" preload="auto" loop="true"></audio>
+		<nav id="progress-nav">
+		<!-- <a href="#slide0" class="icon-platypus"><span>slide0</span></a>
+			<a href="#slide1" class="icon-wolf" onclick="playSlide1()"><span>slide1</span></a>
+			<a href="#slide2" class="icon-rabbit" onclick="playSlide2()"><span>slide2</span></a>
+			<a href="#slide3" class="icon-aligator" onclick="playSlide3()"><span>slide3</span></a>
+			<a href="#slide4" class="icon-turtle" onclick="playSlide4()"><span>slide4</span></a> -->
+			<div class="progress">
+				<div class="progress-item active"></div>
+				<div class="progress-item"></div>
+				<div class="progress-item"></div>
+				<div class="progress-item"></div>
+			</div>
+		</nav>
+		
+		<div id="background">
+			<div id="background-left">
+				 <table width="100%" height="100%">
+                <tr>
+                    <td align="center">
+                       <img id="bg-newspaper" src="img/p1_2/newspaper-01.png">
+						<img id="bg-tv" src="img/p1_2/tv-01.png">
+                    </td>
+                </tr>
+            </table>
+			</div>
+			<div id="background-right" >
+			 <table width="100%" height="100%">
+                <tr>
+                    <td valign="middle">
+						<img id="bg-notebook" src="img/p1_2/notebook-01.png">
+						<img id="bg-mic" src="img/p1_2/mic-01.png">
+					</td>
+                </tr>
+			 </table>
+			</div>
+		</div>
+		
+		<div id="content">
+			<div id="header">
+				<table>
+					<tr>
+						<td valign="middle" width="43%">
+							<img id="header-L" src="img/head/head-1-01.png">
+						</td>
+						<td valign="middle" width="9%">
+							<img id="header-M" src="img/head/head-mic-01.png">
+						</td>
+						<td valign="middle" width="43%">
+							<img id="header-R" src="img/head/head-2-01.png">
+						</td>
+						<td valign="middle" width="5%">
+							<img id="sound" src="img/head/soundon-01.png">
+						</td>
+					</tr>
+				 </table>
+			</div>
+			
+			<div id="buildings">
+				<img id="building-1" src="img/p1_2/building1-01.png">
+				<img id="building-2" src="img/p1_2/building2-01.png">
+				<img id="building-3" src="img/p1_2/building3-01.png">
+				<img id="building-4" src="img/p1_2/building4-01.png">
+				<img id="building-5" src="img/p1_2/building5-01.png">
+			</div>
+			
+			<div id="welcome-window" style="opacity:0">
+				<div id="title" style="font-size: 72px"><b>記者出任務</b></div>
+				<div id="subtitle" style="font-size: 24px">It's not easy to be a good journalist.</div>
+				<div id="emergency-title" style="font-size: 28px">緊急任務!!!</div>
+				<div id="emergency-content" style="font-size: 20px" >你現在是一名記者，<br>
+											剛剛發生一場大地震，報社派你去現場收集資訊，<br>
+											並給你四小時的時間完成一篇詳細深入的報導。</div>
+				<div id="remind">
+					<img id="btn-remind"  src="img/p3_4/noticebutton1-01.png">
+				</div>
+				
+				<div id="tip" style="opacity:0">
+					<div id="tip1" style="font-size: 20px">>> 到現場之後，你要決定採訪哪些人 ，採訪途中會面臨一些突發狀況，影響採訪進行。<br>
+														   >> 收集完資料，也必須花時間撰寫報導，下標題更是重要， 而所有任務，都必須在四小時內完成。</div>
+					<div id="tip2" style="font-size: 20px">準備好了嗎? 捲起袖子出發吧!</div>
+					<div id="start-btn">
+						<img id="btn-start"  src="img/p3_4/startbutton1-01.png">
+					</div>
+				</div>
+			</div>
+			
+			<!--結束畫面-->
+			<div id="end-window" style="opacity:0">
+				<div id="title" style="font-size: 72px"><b>任務結束</b></div>
+				<div id="subtitle" style="font-size: 24px">It's not easy to be a good journalist.</div>
+				<div id="emergency-content" style="font-size: 20px" >現在你知道產製一則新聞不容易了吧！<br><br>
+記者必須在最短的時間內，找到最完整的資訊，途中還可能會遇到外力干預。<br>
+消化完資訊後，再用最清楚的邏輯與簡單的文字，告訴讀者事件的來龍去脈。<br>
+<br>
+希望透過此遊戲讓大家了解記者產製新聞的過程，<br>
+並了解我們平日閱讀的資訊是如何產製的，<br>
+而當我們了解時，自然就會有判斷資訊的能力。<br>
+<br>
+我們將採訪時聽聞的個案融入遊戲中，但不包含所有記者的狀況。
+				
+					<div id="end-btns">
+						<img id= "re" class="re" src="img/p17/restart1.png"> 
+						<a href="https://www.facebook.com/%E5%AA%92%E6%8E%A7-Mediacon-1510632025912785/?fref=ts"><img id= "fb" src="img/p18/fb-01.png"> </a>
+					</div>
+					<div id="sl-block">
+						<img id= "slogan" src="img/p18/slogan-01.png"> <br>
+						
+					</div>
+					<div id="license">
+					《媒控》守護你的腦部健康，讓你容光煥發
+						<font style="font-size: 16px"><br><br>
+							Develope by <a href="https://www.facebook.com/profile.php?id=100002725748323&fref=ts">IMBIG</a>. Music: 
+							<a href="http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100738">
+							Amazing Plan</a> - Distressed by <a href = "http://incompetech.com/">Kevin MacLeod</a> is licensed under a Creative Commons Attribution license
+						</font>
+					</div>
+				</div>
+				
+			</div>
+			
+			
+			<div id="timer" style="font-size: 48px ;opacity:0">
+				<b>					
+					<div id="second">00</div>
+					<div id="spot">:</div>
+					<div id="minute">00</div>
+					<div id="spot">:</div>
+					<div id="hour">04</div>
+				</b>
+			</div>
+			
+			
+			<!-- problem0 -->
+			<div id="problem" class="problem" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>來到現場，發現三棟大樓倒塌，<br>要不要訪受難者家屬呢?</b>（過程為20分鐘）</div>
+				
+				<div id="problem-pic">
+					<img id="mom-big"  src="img/p5/mom-01.png">	
+					<img id="mom-os" src="img/p5/mom_os-01.png" class="bounce animated">	
+				</div>
+				
+				<div id="options">
+					<div id="optionA" class="optionA">
+						<img id="option" src="img/p5/choiceboard-01.png" alt="我應該可以問問地震發生當時的情況或是大樓倒塌的場景。">
+						<div id="text" style="font-size: 24px">我應該可以問問地震發生當時的情況或是大樓倒塌的場景。</div>
+						<img class="option-ask" src="img/p5/ask-01.png" style="opacity:0">
+					</div>
+					<div id="optionB" class="optionB">
+						<img id="option"  src="img/p5/choiceboard-01.png">	
+						<div id="text" style="font-size: 24px">先省時間採訪別人。</div>
+						<img class="option-noask" src="img/p5/noask-01.png" style="opacity:0">
+					</div>
+				</div>
+			</div>
+			
+			<!-- problem1 -->
+			<div id="problem" class="problem" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>剛剛搜救人員從大樓內救出一對母女<br>要不要訪救災人員或救災中心?</b><br>（過程為30分鐘）</div>
+				
+				<div id="problem-pic">
+					<img id="rescuer-big"  src="img/p6/rescuer-01.png">	
+					<img id="rescuer-os" src="img/p6/os_rescuer-01.png" class="bounce animated">	
+				</div>
+				
+				<div id="options">
+					<div id="optionA" class="optionA">
+						<img id="option" src="img/p5/choiceboard-01.png">
+						<div id="text" style="font-size: 24px">我可以拿到最新救災情況：救災人員、獲救人名單及數量、車輛、搜救犬等...</div>
+						<img class="option-ask" src="img/p5/ask-01.png" style="opacity:0">
+					</div>
+					<div id="optionB" class="optionB" >
+						<img id="option"  src="img/p5/choiceboard-01.png">	
+						<div id="text" style="font-size: 24px">我覺得救難資料不重要，想花時間在採訪別人。</div>
+						<img class="option-noask" src="img/p5/noask-01.png" style="opacity:0">
+					</div>
+				</div>
+			</div>
+			
+			<!-- problem2 -->
+			<div id="problem" class="problem" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>看到大樓倒塌，發現柱子裡面有沙拉桶等填充物。<br>要不要訪建築專家?<br></b>（過程為40分鐘）</div>
+				
+				<div id="problem-pic">
+					<img id="expert-big"  src="img/p7/expert-01.png">	
+					<img id="expert-os" src="img/p7/os_expert-01.png" class="bounce animated">	
+				</div>
+				
+				<div id="options">
+					<div id="optionA" class="optionA">
+						<img id="option" src="img/p5/choiceboard-01.png">
+						<div id="text" style="font-size: 24px">我可以得到可靠的專業分析 。</div>
+						<img class="option-ask" src="img/p5/ask-01.png" style="opacity:0">
+					</div>
+					<div id="optionB" class="optionB" >
+						<img id="option"  src="img/p5/choiceboard-01.png">	
+						<div id="text" style="font-size: 24px">省些時間採訪別人。</div>
+						<img class="option-noask" src="img/p5/noask-01.png" style="opacity:0">
+					</div>
+				</div>
+			</div>
+			
+			<!-- problem3 -->
+			<div id="problem" class="problem" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>同事傳臉書訊息給你，請你提供粉專即時新聞。<br></b>（強制縮減三十分鐘）</div>
+				
+				<div id="emergency-pic">
+					<img id="colleague-big"  src="img/p8/cellphone-01.png">	
+					<img id="colleague-messenger" src="img/p8/messenger-01.png">	
+					<img id="colleague-os" src="img/p8/os_colleague-01.png" class="bounce animated">
+				</div>
+				<div id="emergency-button" class="emergency-button">
+					<img class="em8" src="img/p8/next1-01.png">
+				</div>
+			</div>
+			
+			<!-- problem4 -->
+			<div id="problem" class="problem" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>總編輯打電話給你，要你不要採訪王部長。</b></div>
+				
+				<div id="emergency-pic">
+					<img id="boss-big"  src="img/p9/bosscall-01.png">
+					<img id="boss-os" src="img/p9/os_boss-01.png" class="bounce animated">
+					<img id="boss-ring1" src="img/p9/ring1-01.png" class="tada infinite animated">
+					<img id="boss-ring2" src="img/p9/ring2-01.png" class="tada infinite animated">
+					<img id="boss-ring3" src="img/p9/ring3-01.png" class="tada infinite animated">
+				</div>
+				<div id="emergency-button" class="emergency-button">
+					<img class="em8" src="img/p8/next1-01.png">
+				</div>
+			</div>
+			
+			<!-- problem5 -->
+			<div id="problem" class="problem" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>從政府機關那裡下手，感覺挖得到新聞。<br>要不要訪問相關的政府官員呢？</b>（過程為六十分鐘）
+					<div id="warning" style="font-size: 22px">
+						<img id= "pic-w" src="img/p10/warning-01.png"> 記得略過王部長!
+					</div>
+					</div>
+				
+				<div id="problem-pic">
+					<img id="officer-big"  src="img/p10/officer-01.png">	
+					<img id="officer-os" src="img/p10/os_officer-01.png" class="bounce animated">	
+				</div>
+				
+				<div id="options">
+					<div id="optionA" class="optionA">
+						<img id="option" src="img/p5/choiceboard-01.png">
+						<div id="text" style="font-size: 24px">我可以拿到當時建築檢查的相關報告，了解是誰核准了執照，有哪些相關的承辦人員。</div>
+						<img class="option-ask" src="img/p5/ask-01.png" style="opacity:0">
+					</div>
+					<div id="optionB" class="optionB" >
+						<img id="option"  src="img/p5/choiceboard-01.png">	
+						<div id="text" style="font-size: 24px">這之後再看政府發表什麼言論好了 。</div>
+						<img class="option-noask" src="img/p5/noask-01.png" style="opacity:0">
+					</div>
+				</div>
+			</div>
+			
+			<!-- problem6 -->
+			<div id="problem" class="problem" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>總編輯要求你採訪建商。</b></div>
+				
+				<div id="emergency-pic">
+					<img id="phone-big"  src="img/p11/phone_line-01.png">
+					<img id="phone-os" src="img/p11/os_boss-01.png" class="bounce animated">
+					<img id="boss-ring1" src="img/p9/ring1-01.png" class="tada infinite animated">
+					<img id="boss-ring2" src="img/p9/ring2-01.png" class="tada infinite animated">
+					<img id="boss-ring3" src="img/p9/ring3-01.png" class="tada infinite animated">
+				</div>
+				<div id="emergency-button" class="emergency-button">
+					<img class="em8" src="img/p8/next1-01.png">
+				</div>
+			</div>
+			
+			<!-- problem7 -->
+			<div id="problem" class="problem" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>查到蓋這棟大樓的建築公司及負責人名字。</b><br>（過程為六十分鐘）</div>
+				
+				<div id="problem-pic">
+					<img id="builder-big"  src="img/p12/builder-01.png">
+					<img id="builder-os" src="img/p12/os_builder-01.png" class="bounce animated">
+				</div>
+				<div id="options">
+					<div id="optionM" class="optionM">
+						<img id="option" src="img/p5/choiceboard-01.png">
+						<div id="text" style="font-size: 24px">總編輯叫我一定要訪。</div>
+						<img class="option-ask" src="img/p5/ask-01.png" style="opacity:0">
+					</div>
+				</div>
+			</div>
+			
+			<!-- problem8 -->
+			<div id="problem" class="problem" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>採訪結束，要不要拍照紀錄？<br></b>（過程為十分鐘）</div>
+				
+				<div id="problem-pic">
+					<img id="takepicture-big"  src="img/p13/takepicture-01.png">	
+				</div>
+				
+				<div id="options">
+					<div id="optionA" class="optionA">
+						<img id="option" src="img/p5/choiceboard-01.png">
+						<div id="text" style="font-size: 24px">可以清楚呈現災區。</div>
+						<img class="option-ask" src="img/p13/take-01.png" style="opacity:0">
+					</div>
+					<div id="optionB" class="optionB" >
+						<img id="option"  src="img/p5/choiceboard-01.png">	
+						<div id="text" style="font-size: 24px">快來不及了！先寫稿。</div>
+						<img class="option-noask" src="img/p13/notake-01.png" style="opacity:0">
+					</div>
+				</div>
+			</div>
+			
+			<!-- problem9 -->
+			<div id="problem" class="problem" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>終於蒐集完資料了，快點來寫稿吧!</b><br>（敲鍵盤中... 過程為60分鐘）</div>
+				
+				<div id="emergency-pic">
+					<img id="writing-big"  src="img/p14/writing-01.png">
+				</div>
+				<div id="emergency-button" class="emergency-button">
+					<img class="em8" src="img/p8/next1-01.png">
+				</div>
+			</div>
+			
+			<!-- problem10 -->
+			<div id="problem" class="problem" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>最後階段! 下標題! <br>來個吃猛藥還是喝溫水？</b></div>
+				
+				<div id="problem-pic">
+					<img id="topic-big"  src="img/p15/topic1.png">	
+				</div>
+				
+				<div id="options">
+					<div id="optionA" class="optionA">
+						<img id="option" src="img/p15/badtopic_explanation.png">
+						<img class="option-ask" src="img/p15/badtopic-01.png" style="opacity:0">
+						
+					</div>
+					<div id="optionB" class="optionB" >
+						<img id="option"  src="img/p15/goodtopic_explanation">	
+						<img class="option-noask" src="img/p15/goodtopic.png" style="opacity:0">
+					</div>
+				</div>
+			</div>
+			
+			<!-- problem11 -->
+			<div id="problem" class="board" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>編輯台建議</b></div>
+				
+				<div id="board-pic">
+					<img id="board-big"  src="img/p16/Editing board-01.png">
+					<img id="board-editor"  src="img/p16/editor-01.png">
+				</div>
+				<div id="board-text" style="font-size: 24px;color: black"></div>
+				<div id="board-button">
+					<img class="em8" src="img/p8/next1-01.png">
+				</div>
+			</div>
+			
+			<!-- timeout -->
+			<div id="problem" class="time-out" style="opacity:0">
+				<div id="problem-title" style="font-size: 24px"><b>時間不夠了!!! OUT!!!</b></div>
+				<div id="tryagain" style="font-size: 22px">
+						再挑戰一次! >><img id= "re" class="re" src="img/p17/restart1.png"> 
+					</div>
+				<div id="emergency-pic">
+					<img id="time-out" src="img/p17/time'sup-01.png">
+				</div>
+			</div>
+			
+
+		</div>
+		
+
+	</body>
+  
+	<script type="text/javascript" src="main.js" charset="UTF-8"></script>
+</html>

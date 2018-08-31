@@ -1,0 +1,331 @@
+@charset "UTF-8";
+
+#content .buildingMove{
+	
+	/* Choose the animation */
+	animation-name: buildingShake;
+
+	/* The animation’s duration */
+	animation-duration: 5000ms;
+
+	/* The number of times we want
+      the animation to run */
+	animation-iteration-count: 1;
+
+	/* Causes the animation to reverse
+      on every odd iteration */
+	animation-direction: normal;
+}
+
+@-webkit-keyframes buildingShake{
+	0% {
+    opacity: 1;
+    transform: translate(2%, 0);
+	}
+
+  5%,15%,25%,35%,45%,10%,20%,30%,40% {
+   transform: translate(-2%, 0);
+  }
+
+  2%,7%,12%,17%,22%,27%,32%,37%,42%,47%,50% {
+   transform: translate(2%, 0);
+  }
+
+  60%{
+	opacity: 1;
+  }
+	 
+  80%{
+	 opacity: 0;
+  }
+ 100%{
+	 opacity: 0;
+  }
+}
+
+
+@keyframes buildingShake{
+  0% {
+    opacity: 1;
+    transform: translate(2%, 0);
+	}
+
+  5%,15%,25%,35%,45%,10%,20%,30%,40% {
+   transform: translate(-2%, 0);
+  }
+
+  2%,7%,12%,17%,22%,27%,32%,37%,42%,47%,50% {
+   transform: translate(2%, 0);
+  }
+
+  60%{
+	opacity: 1;
+  }
+	 
+  80%{
+	 opacity: 0;
+  }
+  100%{
+	 opacity: 0;
+  }
+}
+
+#content .buildingMove-1{
+	
+	/* Choose the animation */
+	animation-name: buildingShake-1;
+
+	/* The animation’s duration */
+	animation-duration: 5000ms;
+
+	/* The number of times we want
+      the animation to run */
+	animation-iteration-count: 1;
+
+	/* Causes the animation to reverse
+      on every odd iteration */
+	animation-direction: normal;
+}
+
+@-webkit-keyframes buildingShake-1{
+	
+	50%{
+		transform:rotate(0deg) translate(0%, 0%);
+	}
+	
+	80%{
+		transform:rotate(90deg) translate(80%, 50%);
+	}
+	100%{
+	 transform:rotate(90deg) translate(80%, 50%);
+	}
+}
+
+@keyframes buildingShake-1{
+	
+	50%{
+		transform:rotate(0deg) translate(0%, 0%);
+	}
+	
+	80%{
+		transform:rotate(90deg) translate(80%, 50%);
+	}
+		100%{
+	 transform:rotate(90deg) translate(80%, 50%);
+	}
+}
+
+#content .buildingMove-2{
+	
+	/* Choose the animation */
+	animation-name: buildingShake-2;
+
+	/* The animation’s duration */
+	animation-duration: 5000ms;
+
+	/* The number of times we want
+      the animation to run */
+	animation-iteration-count: 1;
+
+	/* Causes the animation to reverse
+      on every odd iteration */
+	animation-direction: normal;
+}
+
+@keyframes buildingShake-2{
+	
+	47%{
+		transform:rotate(0deg) translate(0%, 0%) skewX(0);
+	}
+	
+	80%{
+		transform:rotate(-120deg) translate(-70%, 50%) skewX(-25deg); 
+	}
+	100%{
+	 transform:rotate(-120deg) translate(-70%, 50%) skewX(-25deg); 
+	}
+}
+
+@-webkit-keyframes buildingShake-2{
+	
+	47%{
+		transform:rotate(0deg) translate(0%, 0%) skewX(0);
+	}
+	
+	80%{
+		transform:rotate(-120deg) translate(-70%, 50%) skewX(-25deg); 
+	}
+	100%{
+	 transform:rotate(-120deg) translate(-70%, 50%) skewX(-25deg); 
+	}
+} 
+
+#content .buildingMove-3{
+	
+	/* Choose the animation */
+	animation-name: buildingShake-3;
+
+	/* The animation’s duration */
+	animation-duration: 5000ms;
+
+	/* The number of times we want
+      the animation to run */
+	animation-iteration-count: 1;
+
+	/* Causes the animation to reverse
+      on every odd iteration */
+	animation-direction: normal;
+}
+
+@-webkit-keyframes buildingShake-3{
+	
+	45%{
+		transform:rotate(0deg) translate(0%, 0%);
+	}
+	
+	82%{
+		transform:rotate(110deg) translate(80%, 0%);
+	}
+	100%{
+		transform:rotate(110deg) translate(80%, 0%);
+	}
+}
+
+@keyframes buildingShake-3{
+	
+	45%{
+		transform:rotate(0deg) translate(0%, 0%);
+	}
+	
+	82%{
+		transform:rotate(110deg) translate(80%, 0%);
+	}
+	100%{
+		transform:rotate(110deg) translate(80%, 0%);
+	}
+}
+
+#content .buildingMove-4{
+	
+	/* Choose the animation */
+	animation-name: buildingShake-4;
+
+	/* The animation’s duration */
+	animation-duration: 5000ms;
+
+	/* The number of times we want
+      the animation to run */
+	animation-iteration-count: 1;
+
+	/* Causes the animation to reverse
+      on every odd iteration */
+	animation-direction: normal;
+}
+
+@-webkit-keyframes buildingShake-4{
+	
+	45%{
+		transform:rotate(0deg) translate(0%, 0%);
+	}
+	
+	75%{
+		transform:rotate(-110deg) translate(-80%, 0%);
+	}
+	100%{
+		transform:rotate(-110deg) translate(-80%, 0%);
+	}
+} 
+
+@keyframes buildingShake-4{
+	
+	45%{
+		transform:rotate(0deg) translate(0%, 0%);
+	}
+	
+	75%{
+		transform:rotate(-110deg) translate(-80%, 0%);
+	}
+	100%{
+		transform:rotate(-110deg) translate(-80%, 0%);
+	}
+}
+
+#content .buildingMove-5{
+	
+	/* Choose the animation */
+	animation-name: buildingShake-5;
+
+	/* The animation’s duration */
+	animation-duration: 4000ms;
+
+	/* The number of times we want
+      the animation to run */
+	animation-iteration-count: 1;
+
+	/* Causes the animation to reverse
+      on every odd iteration */
+	animation-direction: normal;
+}
+
+@-webkit-keyframes buildingShake-5{
+	
+	60%{
+		transform:rotate(0deg) translate(0%, 0%);
+	}
+	
+	100%{
+		transform:rotate(90deg) translate(80%, 20%);
+	}
+}
+
+@keyframes buildingShake-5{
+	
+	60%{
+		transform:rotate(0deg) translate(0%, 0%);
+	}
+	
+	100%{
+		transform:rotate(90deg) translate(80%, 20%);
+	}
+}
+
+
+#spot{
+	
+	/* Choose the animation */
+	animation-name: spot-w;
+
+	/* The animation’s duration */
+	animation-duration: 2000ms;
+
+	/* The number of times we want
+      the animation to run */
+	animation-iteration-count: infinite;
+
+	/* Causes the animation to reverse
+      on every odd iteration */
+	animation-direction: normal;
+}
+/*
+@-webkit-keyframes spot-w{
+	0%,50% {
+    opacity: 1;
+  }
+
+  51%,100%{
+	 opacity: 0;
+  }
+ 
+}
+
+@keyframes spot-w{
+  0%,50% {
+    opacity: 1;
+  }
+
+  51%,100%{
+	 opacity: 0;
+  }
+ 
+}
+*/

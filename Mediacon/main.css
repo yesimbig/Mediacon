@@ -1,0 +1,593 @@
+@charset "UTF-8";
+
+html{
+	font-family:sans-serif;
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
+	
+}
+body{
+	margin:0;
+	background-color: #59b490;
+	overflow: hidden
+}
+
+#background{
+	position:absolute;
+    top:0px;
+    left:0px;
+	width:100%;
+	height:100%;
+	margin:0;
+	z-index:-1;
+	
+}
+
+#background #background-left{
+	position:absolute;
+    left:-15%;
+	width:30%;
+	height: 100%;
+	
+}
+
+#background img{
+  width: 100%;
+  height : auto;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 25px 25px 0 0;
+}
+
+#background #bg-mic{
+	left: 10%;
+	width: 50%;
+  height : auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#background #background-right{
+	position:absolute;
+    top:0px;
+    right:-15%;
+	width:30%;
+	height:100%;
+	margin:0;
+}
+
+#content{
+	position:absolute;
+    left: 15%;
+	right:15%;
+	height: 100%;
+	margin:0;
+	z-index:0;
+}
+
+#content #header{
+	position:absolute;
+	top:0;
+	left: 0%;
+	right:-5%;
+	height: 12%;
+}
+
+#header-L,#header-R,#header-M,#sound{
+	height:auto;
+	width:100%;
+	max-height: 100%;
+	max-width: 100%;
+	margin:0;
+}
+
+#content #buildings{
+	position:absolute;
+	left: 15%;
+	right:15%;
+	top: 15%;
+	height: 0;
+	opacity: 0;
+	padding-bottom: 50%;
+	margin:0;
+}
+
+#content #buildings #building-1{
+	position:absolute;
+	height:50%;
+	width:auto;
+	left: 8%;
+	bottom: 5%;
+	margin:0;
+	z-index:2;
+}
+
+#content #buildings #building-2{
+	position:absolute;
+	height:80%;
+	width:auto;
+	left: 18%;
+	bottom: 3%;
+	margin:0;
+	z-index:1;
+}
+
+#content #buildings #building-3{
+	position:absolute;
+	height:99%;
+	width:auto;
+	left: 30%;
+	bottom: 1%;
+	margin:0;
+	z-index:2;
+}
+
+#content #buildings #building-4{
+	position:absolute;
+	height:70%;
+	width:auto;
+	left: 64%;
+	bottom: 0%;
+	margin:0;
+	z-index:3;
+}
+
+#content #buildings #building-5{
+position:absolute;
+	height:50%;
+	width:auto;
+	left: 85%;
+	bottom: 1%;
+	margin:0;
+	z-index:4;
+}
+
+#welcome-window{
+	position:absolute;
+	left: 0%;
+	right:0%;
+	top: 17%;
+	height: 0;
+	padding-bottom: 50%;
+	margin:0;
+	text-align: center;
+	color:white;
+	font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+	z-index:3;
+}
+
+#welcome-window #emergency-title,#welcome-window #remind,#welcome-window #tip1,#welcome-window #start-btn,#end-window #emergency-content{
+	margin: 25px 0 25px 0;
+}
+
+#welcome-window #remind #btn-remind,#welcome-window #btn-start{
+	width: 18%;
+	height: auto;
+}
+
+#timer{
+	position:absolute;
+	right:2%;
+	left:0%;
+	top: 12%;
+	margin:0;
+	text-align: right;
+	color:#ca141d;
+	font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+	z-index:2;
+}
+
+#hour,#spot,#minute,#second{
+	float:right;
+}
+
+#problem{
+	position:absolute;
+	left: 0%;
+	right:0%;
+	top: 15%;
+	bottom: 0%;
+	margin:0;
+	text-align: center;
+	color:white;
+	font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+	z-index:2;
+}
+
+
+
+#problem #options{
+	position:absolute;
+	top: 72%;
+    height:28%;
+	width:100%;
+	text-align: center;	
+}
+
+#problem #options #optionA{
+	position:absolute;
+	color: black;
+	width: 50%;
+	height:100%;
+	max-height: 100%;
+    max-width: 100%;
+	z-index:9;
+}
+
+#problem #options .option-ask{
+	position:absolute;
+	width: 25%;
+	height:auto;
+	right:0;
+	top: 10%;
+	z-index:6;
+}
+
+
+
+#problem #options #optionB{
+	position:absolute;
+	color: black;
+	width: 50%;
+	height:100%;
+	left:50%;
+	max-height: 100%;
+    max-width: 100%;
+	z-index:9;
+}
+
+#problem #options .option-noask{
+	position:absolute;
+	width: 28%;
+	height:auto;
+	left:-2%;
+	top: 10%;
+	z-index:6;
+}
+
+#problem #options #optionM{
+	position:absolute;
+	color: black;
+	width: 50%;
+	height:100%;
+	left: 25%;
+	max-height: 100%;
+    max-width: 100%;
+	z-index:9;
+}
+
+#problem #options #optionM .option-ask{
+	position:absolute;
+	width: 25%;
+	height:auto;
+	left:-5%;
+	top: 10%;
+	z-index:6;
+}
+
+#problem #options #option{
+	color: black;
+	width: 100%;
+    height:auto;
+	max-height: 100%;
+    max-width: 100%;
+	z-index:3;
+}
+
+#problem #options #text{
+	text-align: center;	
+	position: absolute;
+	width: 76%;
+    height:auto;
+	z-index: 4;
+	top:15%;
+	left: 12%;
+}
+
+#problem #problem-pic{
+	position:absolute;
+	left: 0%;
+	right:0%;
+	top: 12%;
+	height: 60%;
+	margin:0;
+	text-align: center;	
+}
+
+#problem #problem-pic #mom-big , #problem #problem-pic #takepicture-big , #problem #problem-pic #topic-big{
+    height:100%;
+	width: auto;
+}
+
+#problem #problem-pic #mom-os{
+	-webkit-animation-delay: 2s;
+	position:absolute;
+	right: 60%;
+	top: 10%;
+    height:auto;
+	width: 40%;
+}
+
+#problem #problem-pic #rescuer-big,#problem #problem-pic #builder-big{
+	position:absolute;
+    right: 20%;
+	height:100%;
+	width: auto;
+}
+
+#problem #problem-pic #rescuer-os,#problem #problem-pic #builder-os{
+	-webkit-animation-delay: 2s;
+	position:absolute;
+	right: 50%;
+	top: 10%;
+    height:auto;
+	width: 40%;
+}
+
+#problem #problem-pic #expert-big{
+	position:absolute;
+    left: 20%;
+	height:100%;
+	width: auto;
+}
+
+#problem #problem-pic #expert-os{
+	-webkit-animation-delay: 2s;
+	position:absolute;
+	left: 50%;
+	top: 10%;
+    height:auto;
+	width: 40%;
+}
+
+#problem #problem-pic #officer-big{
+	position:absolute;
+    right: 50%;
+	height:100%;
+	width: auto;
+}
+
+#problem #warning{
+	position:absolute;
+    left: 60%;
+	height:100%;
+	width: auto;
+}
+
+#problem #warning #pic-w{
+	height:5%;
+	width: auto;
+	vertical-align:middle;
+}
+
+#problem #problem-pic #officer-os{
+	-webkit-animation-delay: 2s;
+	position:absolute;
+	left: 50%;
+	top: 25%;
+    height:auto;
+	width: 40%;
+}
+
+#problem #emergency-pic{
+	position:absolute;
+	left: 0%;
+	right:0%;
+	top: 12%;
+	height: 70%;
+	margin:0;
+	text-align: center;	
+}
+
+#problem #emergency-button{
+	position:absolute;
+	color: black;
+	width: 17%;
+	height:20%;
+	right:10%;
+	top: 60%;
+	z-index:9;
+}
+
+#problem .em8{
+	width: 100%;
+	height:auto;
+	z-index:9;
+}
+
+#problem #emergency-pic #colleague-big{
+	position:absolute;
+    right: 50%;
+	height:100%;
+	width: auto;
+}
+
+#problem #emergency-pic #colleague-messenger{
+	position:absolute;
+    left: 40%;
+	bottom: 20%;
+	height:30%;
+	width: auto;
+}
+
+#problem #emergency-pic #colleague-os{
+	-webkit-animation-delay: 2s;
+	position:absolute;
+	left: 53%;
+	bottom: 42%;
+    height:35%;
+	width: auto;
+}
+
+#problem #emergency-pic #boss-big{
+	position:absolute;
+    right: 44%;
+	height:100%;
+	width: auto;
+}
+
+#problem #emergency-pic #boss-os{
+	-webkit-animation-delay: 2s;
+	position:absolute;
+	left: 53%;
+	bottom: 32%;
+    height:25%;
+	width: auto;
+}
+
+#problem #emergency-pic #boss-ring1{
+	position:absolute;
+	left: 28%;
+	bottom: 90%;
+    height:24%;
+	width: auto;
+}
+
+#problem #emergency-pic #boss-ring2{
+	position:absolute;
+	left: 24%;
+	bottom: 85%;
+    height:20%;
+	width: auto;
+}
+
+#problem #emergency-pic #boss-ring3{
+	position:absolute;
+	left: 20%;
+	bottom: 82%;
+    height:14%;
+	width: auto;
+}
+
+#problem #emergency-pic #phone-big{
+	position:absolute;
+    left: 32%;
+	height:100%;
+	width: auto;
+}
+
+#problem #emergency-pic #phone-os{
+	-webkit-animation-delay: 2s;
+	position:absolute;
+	left: 63%;
+	bottom: 50%;
+    height:34%;
+	width: auto;
+}
+
+#problem #emergency-pic #writing-big{
+	position:absolute;
+    right: 32%;
+	height:100%;
+	width: auto;
+}
+
+#problem #emergency-pic #time-out{
+	height:100%;
+	width: auto;
+}
+
+
+#problem #tryagain{
+	height:100%;
+	width: auto;
+	z-index: 2;
+}
+
+#problem #tryagain #re{
+	height:8%;
+	width: auto;
+	vertical-align:middle;
+	z-index: 9;
+}
+
+#problem #board-pic{
+	position:absolute;
+	left: 0%;
+	right:0%;
+	top: 5%;
+	height: 90%;
+	margin:0;
+	text-align: center;		
+}
+
+#problem #board-pic #board-big{
+	position:absolute;
+    right: 22%;
+	height:80%;
+	width: 80%;
+}
+
+#problem #board-text{
+	position:absolute;
+	left: 7%;
+	right:30%;
+	top: 12%;
+	bottom: 35%;
+	margin:0;
+	text-align: left;		
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#problem #board-pic #board-editor{
+	position:absolute;
+    right: -5%;
+	top: 5%;
+	height:78%;
+	width: auto;
+}
+
+#problem #board-button{
+	position:absolute;
+	color: black;
+	width: 17%;
+	height:20%;
+	top: 80%;
+	left: 42%;
+	z-index:9;
+}
+
+#end-window{
+	position:absolute;
+	left: 0%;
+	right:0%;
+	top: 17%;
+	bottom: 0%;
+	margin:0;
+	text-align: center;
+	color:white;
+	font-family: Arial, "文泉驛正黑", "WenQuanYi Zen Hei", "儷黑 Pro", "LiHei Pro", "微軟正黑體", "Microsoft JhengHei", "標楷體", DFKai-SB, sans-serif;
+	z-index:3;
+}
+
+#end-window #end-btns{
+
+	height: 110px;
+	margin:0px auto;
+	text-align:center;
+}
+
+#end-window #end-btns img{
+	height: 100%;
+	width: auto;
+}
+
+#end-window #sl-block{
+	height: 80px;
+	text-align:center;
+	opacity: 0.7;
+}
+
+#end-window #sl-block img{
+	height: 100%;
+	width: auto;
+}
+
+#end-window #license{
+	position:absolute;
+	width:100%;
+	bottom:0;
+	text-align:center;
+	opacity: 0.7;
+}
